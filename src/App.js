@@ -1,21 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
 import './App.css';
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AppBar from 'material-ui/AppBar';
+
+import Login from './components/Login';
+import Register from './components/Register';
+import MyMapComponent from './MyMapComponent';
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div className="App">
         <MuiThemeProvider>
-          <AppBar label="Default" />
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to React</h1>
-          </header>
-          <div>Stuff here</div>
-          <div class="banner">Test</div>
+          <div className="flexContainer">
+            <AppBar label="Default" showMenuIconButton={false}>
+              <Login /> <Register />
+            </AppBar>
+            <div className="banner">
+              <span>Delivery Service Company!</span>
+            </div>
+            <MyMapComponent />
+          </div>
         </MuiThemeProvider>
       </div>
     );

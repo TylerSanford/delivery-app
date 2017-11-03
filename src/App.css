@@ -1,39 +1,34 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
 .App {
   text-align: center;
-  height: 1000px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  border: 1px black solid;
 }
 
 .banner {
+  display: flex;
+  height: 50%;
+  border: 1px solid black;
+  background-position: center;
   background-image: url('images/banners/1.jpg');
-  width: 80%;
-  height: auto;
+  background-size: cover;
+}
+
+.banner span {
+  float: right;
+  font-family: 'Lobster', cursive;
+  color: white;
+  font-size: 60px;
+  vertical-align: middle;
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  text-shadow: 4px 4px rgba(61, 58, 58, 0.746);
 }
